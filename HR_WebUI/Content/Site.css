@@ -1,7 +1,4 @@
-﻿body {
-    padding-top: 0px;
-    padding-bottom: 20px;
-}
+﻿
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -16,3 +13,6 @@ textarea {
     max-width: 280px;
 }
 
+.list-group-item {
+    border: none !important;
+}

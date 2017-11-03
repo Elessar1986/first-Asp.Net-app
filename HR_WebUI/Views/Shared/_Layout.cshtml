@@ -8,68 +8,66 @@
 
     <!-- CSS  -->
     
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/justified-nav.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 
-    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    @*<script src="~/Scripts/modernizr-2.8.3.js"></script>*@
 
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
 
 </head>
 <body>
     <div class="container">
-        <header class=" bg-primary">
-            <h3 class="text-white" >@ViewBag.Title</h3>
-
-            <ul class="nav nav-pills navbar-right">
-                <li class="nav-item">
-                    @Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "nav-link active" })
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "nav-link active" })
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "nav-link active" })
-                </li>
-                
-            </ul>
-                
+        <header class="bg-info">
+                <div class="header clearfix">
+                    <nav>
+                        <ul class="nav nav-pills pull-right">
+                            <li role="presentation">@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</li>
+                            <li role="presentation">@Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
+                            <li role="presentation">@Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "" })</li>
+                            <li role="presentation">@Html.ActionLink("Info", "Index", "Info", new { area = "" }, new { @class = "" })</li>
+                        </ul>
+                    </nav>
+                    <h3 class="text-primary">HR ASP.Net page: @ViewBag.Title</h3>
+                </div>
         </header>
 
         @RenderBody()
 
 
-        <footer class="bg-dark text-white">
+        <footer class="bg-info">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-6 text-white" >
-                        <ul>
-                            <li>@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</li>
-                            <li>@Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
-                            <li>@Html.ActionLink("Employees", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
-                        </ul>
+                    <div class="col-lg-3 text-white" >
+                        <div class="list-group">
+                            @Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-info" })
+                            @Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "list-group-item list-group-item-info" })
+                            @Html.ActionLink("Employees", "Index", "JobTitle", new { area = "" }, new { @class = "list-group-item list-group-item-info" })
+                        </div>
 
 
                     </div>
 
-                    <div class="col-sm-12 col-lg-6 text-white" >
+                    <div class="col-lg-3 col-lg-offset-5 text-right" >
                         <h4 class="">Contacts:</h4>
-                        <ul>
-                            <li><a class="text-white">+3 8097 321 94 12</a></li>
-                            <li><a class="text-white" href="mailto:ivan.arepjev@gmail.com">ivan.arepjev@gmail.com</a></li>
-                        </ul>
+                        <div class="">
+                            <a class="text-white">+3 8097 321 94 12</a>
+                            <a class="text-white" href="mailto:ivan.arepjev@gmail.com">ivan.arepjev@gmail.com</a>
+                        </div>
                         <h4 class="">Connect with me:</h4>
                         <div class="">
-                            <a href="https://www.facebook.com/profile.php?id=100001875456272" target="_blank">facebook</a>
-                            <a href="https://www.linkedin.com/in/ivan-arepjev-a8950613a/" target="_blank">linkedin</a>
-                            <a href="skype:karadras@narod.ru?call" target="_blank">skype</a>
+                            <p><a href="https://www.facebook.com/profile.php?id=100001875456272" target="_blank">facebook</a> | 
+                            <a href="https://www.linkedin.com/in/ivan-arepjev-a8950613a/" target="_blank">linkedin</a> | 
+                            <a href="skype:karadras@narod.ru?call" target="_blank">skype</a></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="">
                 <div class="container">
-                    Copyright © 2017 <a class="orange-text text-lighten-3" href="index.html">Ivan Arepjev</a>. All rights reserved.  Made by <a class="text-white" href="http://bootstrap.com">Bootstrap</a>
+                    Copyright © 2017 <a class="orange-text text-lighten-3" href="http://ivanarepjev.netne.net/">Ivan Arepjev</a>. All rights reserved.  Made by <a class="text-white" href="http://bootstrap.com">Bootstrap</a>
                 </div>
             </div>
         </footer>
