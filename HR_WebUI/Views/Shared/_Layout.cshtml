@@ -1,43 +1,85 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+    <title>My first ASP.NET page</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "navbar-brand" })
-                </ul>
-            </div>
-        </div>
-    </div>
+    <div class="container">
+        <header>
+            <nav class="blue darken-4" role="navigation">
+                <div class="nav-wrapper">
+                    <ul class="left">
+                        <li><h3>@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</h3></li>
 
-    <div class="container body-content">
+                    </ul>
+                    <ul class="right">
+                        <li><h5>@Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })</h5></li>
+                        <li><h5>@Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "" })</h5></li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    @RenderSection("myscript",false)
+
+        <footer class="page-footer  indigo darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 m6 s5">
+                        <h4 class="white-text">Ivan Arepjev</h4>
+                        <ul>
+                            <li>@Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Employees", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
+                        </ul>
+
+
+                    </div>
+
+                    <div class="col right-align l6 m6 s7">
+                        <h4 class="white-text">Contacts:</h4>
+                        <ul>
+                            <li><a class="white-text">+3 8097 321 94 12</a></li>
+                            <li><a class="white-text" href="mailto:ivan.arepjev@gmail.com">ivan.arepjev@gmail.com</a></li>
+                        </ul>
+                        <h4 class="white-text">Connect with me:</h4>
+                        <div class="socials">
+                            <a href="https://www.facebook.com/profile.php?id=100001875456272" target="_blank"><div id="facebook"></div></a>
+                            <a href="https://www.linkedin.com/in/ivan-arepjev-a8950613a/" target="_blank"><div id="linkedin"></div></a>
+                            <a href="https://plus.google.com/u/0/109815469323288723088" target="_blank"><div id="google"></div></a>
+                            <a href="skype:karadras@narod.ru?call" target="_blank"> <div id="skype"> </div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Copyright © 2017 <a class="orange-text text-lighten-3" href="index.html">Ivan Arepjev</a>. All rights reserved.  Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                </div>
+            </div>
+        </footer>
+
+
+        <!--  Scripts-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+        @RenderSection("myscript", false)
+        
+
+
+
+    </div>
 </body>
 </html>

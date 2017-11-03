@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
 <h2>Edit</h2>
+
 
 @using (Html.BeginForm())
 {
@@ -61,11 +61,23 @@
 </div>
 
 
+
+
+@section myscript{
+    
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
 <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#datetimepicker1').datetimepicker();
+        $('.datepicker').datepicker({
+            format: "dd-mm-yyyy",
+            language: "ru",
+            orientation: "bottom auto",
+            todayHighlight: true
+           
+        });
     });
 </script>
 
+}
