@@ -13,15 +13,16 @@
     <link href="~/Content/justified-nav.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 
-    @*<script src="~/Scripts/modernizr-2.8.3.js"></script>*@
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
 
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
 
 </head>
 <body>
     <div class="container">
-        <header class="bg-info">
+        <header class="my-bg-color">
                 <div class="header clearfix">
+                    <h2 class="">HR : @ViewBag.Title</h2>
                     <nav>
                         <ul class="nav nav-pills pull-right">
                             <li role="presentation">@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</li>
@@ -30,22 +31,27 @@
                             <li role="presentation">@Html.ActionLink("Info", "Index", "Info", new { area = "" }, new { @class = "" })</li>
                         </ul>
                     </nav>
-                    <h3 class="text-primary">HR ASP.Net page: @ViewBag.Title</h3>
+                    
                 </div>
         </header>
 
         @RenderBody()
 
 
-        <footer class="bg-info">
+        <footer class="my-bg-color">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 text-white" >
-                        <div class="list-group">
-                            @Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-info" })
-                            @Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "list-group-item list-group-item-info" })
-                            @Html.ActionLink("Employees", "Index", "JobTitle", new { area = "" }, new { @class = "list-group-item list-group-item-info" })
-                        </div>
+                        <div class="">
+                           <h4>@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</h4>
+                            <h4>
+                                @Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })
+                            </h4>
+                            <h4>
+                                @Html.ActionLink("Employees", "Index", "JobTitle", new { area = "" }, new { @class = "" })
+                            </h4>
+                            <h4> @Html.ActionLink("Info", "Index", "Info", new { area = "" }, new { @class = "" })</h4>
+</div>
 
 
                     </div>
@@ -53,7 +59,7 @@
                     <div class="col-lg-3 col-lg-offset-5 text-right" >
                         <h4 class="">Contacts:</h4>
                         <div class="">
-                            <a class="text-white">+3 8097 321 94 12</a>
+                            <a>+3 8097 321 94 12</a>
                             <a class="text-white" href="mailto:ivan.arepjev@gmail.com">ivan.arepjev@gmail.com</a>
                         </div>
                         <h4 class="">Connect with me:</h4>
@@ -66,7 +72,7 @@
                 </div>
             </div>
             <div class="">
-                <div class="container">
+                <div class="text-center">
                     Copyright © 2017 <a class="orange-text text-lighten-3" href="http://ivanarepjev.netne.net/">Ivan Arepjev</a>. All rights reserved.  Made by <a class="text-white" href="http://bootstrap.com">Bootstrap</a>
                 </div>
             </div>
