@@ -4,10 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 
-    <title>My first ASP.NET page</title>
+    <title>@ViewBag.Title - My ASP.NET Application</title>
 
     <!-- CSS  -->
-    <link type="text/css" />
+    
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
 
 </head>
@@ -72,8 +75,9 @@
 
         <!--  Scripts-->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        
         <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
         @RenderSection("myscript", false)
         
 
