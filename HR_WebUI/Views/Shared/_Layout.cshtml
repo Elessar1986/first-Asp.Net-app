@@ -10,38 +10,41 @@
     
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
 
 </head>
 <body>
     <div class="container">
-        <header>
-            <nav class="blue darken-4" role="navigation">
-                <div class="nav-wrapper">
-                    <ul class="left">
-                        <li><h3>@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</h3></li>
+        <header class=" bg-primary">
+            <h3 class="text-white" >@ViewBag.Title</h3>
 
-                    </ul>
-                    <ul class="right">
-                        <li><h5>@Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })</h5></li>
-                        <li><h5>@Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "" })</h5></li>
-
-                    </ul>
-
-                </div>
-            </nav>
+            <ul class="nav nav-pills navbar-right">
+                <li class="nav-item">
+                    @Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "nav-link active" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "nav-link active" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "nav-link active" })
+                </li>
+                
+            </ul>
+                
         </header>
 
         @RenderBody()
 
 
-        <footer class="page-footer  indigo darken-4">
+        <footer class="bg-dark text-white">
             <div class="container">
                 <div class="row">
-                    <div class="col l6 m6 s5">
-                        <h4 class="white-text">Ivan Arepjev</h4>
+                    <div class="col-sm-12 col-lg-6 text-white" >
                         <ul>
+                            <li>@Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "" })</li>
                             <li>@Html.ActionLink("Jod Titles", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
                             <li>@Html.ActionLink("Employees", "Index", "JobTitle", new { area = "" }, new { @class = "" })</li>
                         </ul>
@@ -49,25 +52,24 @@
 
                     </div>
 
-                    <div class="col right-align l6 m6 s7">
-                        <h4 class="white-text">Contacts:</h4>
+                    <div class="col-sm-12 col-lg-6 text-white" >
+                        <h4 class="">Contacts:</h4>
                         <ul>
-                            <li><a class="white-text">+3 8097 321 94 12</a></li>
-                            <li><a class="white-text" href="mailto:ivan.arepjev@gmail.com">ivan.arepjev@gmail.com</a></li>
+                            <li><a class="text-white">+3 8097 321 94 12</a></li>
+                            <li><a class="text-white" href="mailto:ivan.arepjev@gmail.com">ivan.arepjev@gmail.com</a></li>
                         </ul>
-                        <h4 class="white-text">Connect with me:</h4>
-                        <div class="socials">
-                            <a href="https://www.facebook.com/profile.php?id=100001875456272" target="_blank"><div id="facebook"></div></a>
-                            <a href="https://www.linkedin.com/in/ivan-arepjev-a8950613a/" target="_blank"><div id="linkedin"></div></a>
-                            <a href="https://plus.google.com/u/0/109815469323288723088" target="_blank"><div id="google"></div></a>
-                            <a href="skype:karadras@narod.ru?call" target="_blank"> <div id="skype"> </div></a>
+                        <h4 class="">Connect with me:</h4>
+                        <div class="">
+                            <a href="https://www.facebook.com/profile.php?id=100001875456272" target="_blank">facebook</a>
+                            <a href="https://www.linkedin.com/in/ivan-arepjev-a8950613a/" target="_blank">linkedin</a>
+                            <a href="skype:karadras@narod.ru?call" target="_blank">skype</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
+            <div class="">
                 <div class="container">
-                    Copyright © 2017 <a class="orange-text text-lighten-3" href="index.html">Ivan Arepjev</a>. All rights reserved.  Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                    Copyright © 2017 <a class="orange-text text-lighten-3" href="index.html">Ivan Arepjev</a>. All rights reserved.  Made by <a class="text-white" href="http://bootstrap.com">Bootstrap</a>
                 </div>
             </div>
         </footer>

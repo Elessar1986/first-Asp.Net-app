@@ -4,7 +4,7 @@
     ViewBag.Title = "Title Job";
 }
 
-<h2>Index</h2>
+
 
 <p>
     @Html.ActionLink("New Job Title", "Edit", null, new { @class = "btn-warning btn-sm" })
@@ -24,7 +24,7 @@
             @Html.DisplayFor(modelItem => item.NameJobTitle)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.JobTitleId }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.JobTitleId }, new { @class = "btn btn-primary btn-sm" }) 
 
             @Html.ActionLink("Delete", "Delete", new { id=item.JobTitleId }, new { @class = "btn btn-danger btn-sm deleteJob" })
         </td>
